@@ -1,7 +1,7 @@
 ---
 - hosts:[testservers]
 
-tasks:
+    tasks:
     # do an "apt-get update", to ensure latest package lists
     - name: apt-get update
       apt:
