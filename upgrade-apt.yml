@@ -1,7 +1,7 @@
 ---
     tasks:
     # do an "apt-get update", to ensure latest package lists
-      - name: apt-get update
+    - name: apt-get update
       apt:
         update-cache: yes
       changed_when: 0
