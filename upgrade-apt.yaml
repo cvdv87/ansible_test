@@ -1,7 +1,7 @@
 - hosts: testservers
   remote_user: technology
-  become: true
-  become_method: su
+  #become: true
+  #become_method: su
    tasks:
    - name: updates a server
      apt: update_cache=yes
