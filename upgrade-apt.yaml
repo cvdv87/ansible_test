@@ -2,6 +2,7 @@
   remote_user: technology
   become: yes
   become_method: su
+  become_user: root
   tasks:
    - name: updates a server
      apt: update_cache=yes
