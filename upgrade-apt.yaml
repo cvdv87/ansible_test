@@ -1,5 +1,4 @@
 - hosts: testservers
-  remote_user: technology
   sudo: yes
   tasks:
    - name: updates a server
