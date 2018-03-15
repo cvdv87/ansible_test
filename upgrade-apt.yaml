@@ -1,4 +1,4 @@
-- hosts: testservers
+- hosts: testservers_ota
   sudo: yes
   tasks:
    - name: updates a server
