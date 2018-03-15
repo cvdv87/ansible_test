@@ -1,8 +1,10 @@
 - hosts: testservers_ota
-  sudo: yes
-  tasks:
+   tasks:
    - name: updates a server
+     become: true
      apt: update_cache=yes
-   - name: upgrade a server
-     exclude: wget
+   - name: upgrade a server without touching wget
+     become: true
      apt: upgrade=dist
+     name: wget
+     state: present
