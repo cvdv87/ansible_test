@@ -1,11 +1,19 @@
 - hosts: testservers_ota
    tasks:
+   - name: Marking package for hold
+     become: true
+     command: mark-hold wget
+   
    - name: updates a server
      become: true
      apt: update_cache=yes
+   
    - name: upgrade a server without touching wget
      become: true
      apt: upgrade=dist
-     name: wget
-     state: present
-# this is not working yet!
+   
+   - name: Unmarking package from hold
+     become: true
+     command: mark-hold wget
+   
+ 
