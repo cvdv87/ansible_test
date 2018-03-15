@@ -1,5 +1,5 @@
 - hosts: testservers_ota
-   tasks:
+ 
    - name: Marking package for hold
      become: true
      command: mark-hold wget
