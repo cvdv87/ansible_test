@@ -1,22 +1,16 @@
 - hosts: testservers_ota
+   ansible_user: technology
+   ansible_become: true
    
    tasks: 
    - name: Marking package for hold
      command: mark-hold wget
-     become: true
-     become_method: sudo 
-     
+         
    - name: updates a server
      apt: update_cache=yes
-     become: true
-     become_method:sudo
-     
+          
    - name: upgrade a server without touching wget
      apt: upgrade=dist
-     become: true
-     become_method:sudo
-     
+         
    - name: Unmarking package from hold
      command: mark-hold wget
-     become: true
-     become_method:sudo
