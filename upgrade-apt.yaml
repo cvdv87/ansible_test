@@ -1,6 +1,5 @@
 - hosts: testservers_ota
    ansible_become: true
-   
    tasks: 
    - name: Marking package for hold
      command: mark-hold wget
