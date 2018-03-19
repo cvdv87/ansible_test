@@ -2,7 +2,7 @@
   vars: 
    become: yes
    
-   tasks: 
+  tasks: 
    - name: Marking package for hold
      command: mark-hold wget
          
