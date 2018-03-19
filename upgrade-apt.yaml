@@ -4,7 +4,7 @@
    
   tasks: 
    - name: Marking package for hold
-     command: mark-hold wget
+     command: apt-mark hold wget
          
    - name: updates a server
      apt: update_cache=yes
@@ -13,4 +13,4 @@
      apt: upgrade=dist
          
    - name: Unmarking package from hold
-     command: mark-hold wget
+     command: apt-mark unhold wget
