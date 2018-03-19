@@ -1,0 +1,8 @@
+- hosts: testservers_ota_windows2016
+  vars:
+  tasks:
+   -name: Register Windows
+   win_shell: cscript slmgr.vbs /ipk XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+   args:
+   chdir: C:\Windows\System32\
+  
