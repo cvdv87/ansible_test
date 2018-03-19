@@ -1,5 +1,4 @@
 - hosts: testservers_ota
-   ansible_user: technology
    ansible_become: true
    
    tasks: 
